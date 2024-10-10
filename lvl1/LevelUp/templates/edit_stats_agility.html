@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Edit Stats{% endblock %}
+
+{% block content %}
+<div class="you-stats">
+    <a href="{% url 'profile' %}" class="btn-primary-stats">Go back</a>
+</div>
+<section class="you-stats">
+    
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="{% static 'images/agility.png' %}" alt="Agility" class="form-image">
+                    <div class="form-field">
+                        <label for="{{ form.speed.id_for_label }}">Speed:<br>Run 100 meters</label>
+                        {{ form.speed }}<p>Seconds</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="{% static 'images/agility.png' %}" alt="Agility" class="form-image">
+                    <div class="form-field">
+                        <label for="{{ form.jump.id_for_label }}">Vertical Jump:<br> Height</label>
+                        {{ form.jump }}<p>Centimeter</p>
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="{% static 'images/agility.png' %}" alt="Agility" class="form-image">
+                    <div class="form-field">
+                        <label for="{{ form.kick_height.id_for_label }}">Kick Height:<br> Kick test</label>
+                        {{ form.kick_height }}<p>Centimeter</p>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary-strength">Save Changes</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

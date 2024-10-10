@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Edit Stats{% endblock %}
+
+{% block content %}
+<div class="you-stats">
+    <a href="{% url 'profile' %}" class="btn-primary-stats">Go back</a>
+</div>
+<section class="you-stats">
+    <div class="form-container">
+        <form method="post">
+            {% csrf_token %}
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="{% static 'images/stamina.png' %}" alt="Agility" class="form-image">
+                    <div class="form-field">
+                        <label for="{{ form.run.id_for_label }}">Run:<br>5km</label>
+                        {{ form.run }}<p>Minutes</p>
+                        {% if form.bench_level.value %}
+                        <p>Level: {{ form.run_level.value }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="{% static 'images/stamina.png' %}" alt="Agility" class="form-image">
+                    <div class="form-field">
+                        <label for="{{ form.burpees.id_for_label }}">Burpees:<br>Max reps on 60 sec</label>
+                        {{ form.burpees }}<p>Reps</p>
+                        {% if form.bench_level.value %}
+                        <p>Level: {{ form.burpees_level.value }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="grid-item">
+                    <img src="{% static 'images/stamina.png' %}" alt="Agility" class="form-image">
+                    <div class="form-field">
+                        <label for="{{ form.plank.id_for_label }}">Plank:<br>Amount of minutes</label>
+                        {{ form.plank }}<p>Minutes</p>
+                        {% if form.bench_level.value %}
+                        <p>Level: {{ form.plank_level.value }}</p>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn-primary-strength">Save Changes</button>
+        </form>
+    </div>
+</section>
+{% endblock %}

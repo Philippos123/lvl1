@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+
+{% block title %}Submit Media Form{% endblock %}
+
+{% block content %}
+<div class="media-form-container">
+    <h1>Submit Your Measurements and Media</h1>
+    <form method="post" enctype="multipart/form-data" class="media-form">
+        {% csrf_token %}
+            {{ form.name}}
+        <h2>Measurements</h2>
+        <h3>Rules:
+            <ul class="form-list">
+                <li>The strength tests are always measured at 3 reps.</li>
+                <li>Measurements must be in kilograms (kg) or centimeters (cm).</li>
+                <li>For the run_5km_minutes field, please enter the time in minutes.</li>
+                <li>Media must be in the form of a video or image to prove that you actully made the lift or the test.</li>
+        </h3>
+        <div class="form-group"><p> Max weight for benchpress 3 reps</p>
+            {{ form.benchpress_kg.label_tag }}
+            {{ form.benchpress_kg }}
+        </div>
+        <div class="form-group"><p> Max weight for deadlift 3 reps</p>
+            {{ form.deadlift_kg.label_tag }}
+            {{ form.deadlift_kg }}
+        </div>
+        <div class="form-group"><p> Max weight for squats 3 reps</p>
+            {{ form.squats_kg.label_tag }}
+            {{ form.squats_kg }}
+        </div>
+        <div class="form-group"><p> 100m run time in seconds</p>
+
+            {{ form.run_100m_seconds.label_tag }}
+            {{ form.run_100m_seconds }}
+        </div>
+        <div class="form-group"><p> Vertical jump height in cm</p>
+
+            {{ form.vertical_jump_height_cm.label_tag }}
+            {{ form.vertical_jump_height_cm }}
+        </div>
+        <div class="form-group"><p> Kick height in cm</p>
+            {{ form.kick_height_cm.label_tag }}
+            {{ form.kick_height_cm }}
+        </div>
+        <div class="form-group"><p> 5km run time in minutes</p>
+            {{ form.run_5km_minutes.label_tag }}
+            {{ form.run_5km_minutes }}
+        </div>
+        <div class="form-group"><p> Max amount of burpees in 60 seconds</p>
+            {{ form.burpees_60sec.label_tag }}
+            {{ form.burpees_60sec }}
+        </div>
+        <div class="form-group"><p> Max amount of plank in minutes</p>
+            {{ form.plank_minutes.label_tag }}
+            {{ form.plank_minutes }}
+        </div>
+
+        <h2>Media Uploads</h2>
+        <div class="form-group">
+            {{ form.benchpress_media.label_tag }}
+            {{ form.benchpress_media }}
+        </div>
+        <div class="form-group">
+            {{ form.deadlift_media.label_tag }}
+            {{ form.deadlift_media }}
+        </div>
+        <div class="form-group">
+            {{ form.squats_media.label_tag }}
+            {{ form.squats_media }}
+        </div>
+        <div class="form-group">
+            {{ form.run_100m_media.label_tag }}
+            {{ form.run_100m_media }}
+        </div>
+        <div class="form-group">
+            {{ form.vertical_jump_media.label_tag }}
+            {{ form.vertical_jump_media }}
+        </div>
+        <div class="form-group">
+            {{ form.kick_media.label_tag }}
+            {{ form.kick_media }}
+        </div>
+        <div class="form-group">
+            {{ form.run_5km_media.label_tag }}
+            {{ form.run_5km_media }}
+        </div>
+        <div class="form-group">
+            {{ form.burpees_media.label_tag }}
+            {{ form.burpees_media }}
+        </div>
+        <div class="form-group">
+            {{ form.plank_media.label_tag }}
+            {{ form.plank_media }}
+        </div>
+
+        <button type="submit" class="submit-button">Submit</button>
+    </form>
+</div>
+{% endblock %}

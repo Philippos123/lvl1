@@ -1,0 +1,1095 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1E2A38;
+    color: white;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: capitalize;
+}
+p{
+    font-weight: 400;
+}
+
+header {
+    background-color: #2c3e50; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 10px 40px 20px; /* Padding around the content */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out header items */
+    align-items: center; /* Vertically center items */
+    font-size: 18px;
+}
+
+header div {
+    font-size: 1.5em; /* Larger font size for the site title */
+    font-weight: bold; /* Make the site title bold */
+}
+
+nav {
+    text-transform: uppercase;
+    font-weight: 500;/* No additional styles needed for the nav element itself */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points from list items */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to layout the list items */
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between menu items */
+    padding:10px;
+    border:solid 2px #2c3e50;
+    background-color: #1E2A38;
+    border-radius: 10px;
+
+}
+
+nav ul li:first-child {
+    margin-left: 0; /* Remove left margin from the first item */
+}
+
+nav ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1em; /* Standard font size for menu items */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+    
+}
+
+nav ul  :hover,
+nav ul  :focus {
+    background-color: #3498DB;
+    color: #1E2A38;
+}
+
+
+/* Responsive design */
+
+
+.hero {
+    background-color: rgba(0, 0, 0, 0.9);
+    background-image: url(../images/solo-leveling-thumb.jpg);
+    position:relative;
+    display: flex;
+    align-items: center;
+    background-size:cover;
+    height:650px;
+    justify-content: center;
+    box-shadow: 10px 1px 10px 6px  #3498dba2;
+    font-size: 18px;
+
+    
+}
+
+.hero-overlay{
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 30px 30px 90px 30px ;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #3498dba2;
+    background-position: center;
+    position: relative;
+    font-size: 18px;
+}
+
+
+
+.hero-overlay h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    
+    color: white;
+}
+
+
+.hero-overlay p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 30px;
+    
+}
+
+.btn-primary {
+    background-color: #3498DB;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.btn-primary  :hover,
+.btn-primary  :focus {
+    background-color: #50db34;
+    color: #1E2A38;
+    
+}
+
+.features {
+    background-color: #1e2a3836;
+    padding-left: 18%;
+    padding-right: 18%;
+}
+.features h2 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 80px;
+    font-size: 44px;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.image-container {
+    justify-content: center; /* Centrerar horisontellt */
+    align-items: center;     /* Centrerar vertikalt */           /* Om du vill att det ska täcka hela höjden */
+    position: relative;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.laser-eyes {
+    background-image: url(../images/junwu.png);
+    width: 80%;
+    height: 400px;
+    background-size: contain;
+    background-position: center; /* Centrerar bilden inom elementet */
+    background-repeat: no-repeat; /* Förhindrar upprepning av bilden */
+    padding-top: 0px;
+    margin-top: 0px;
+    position: absolute;
+}
+
+
+.row {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    flex-wrap: wrap; /* Gör så att element flyttas till nästa rad om det inte får plats */
+    gap: 10px; /* Mellanrum mellan kolumnerna */
+}
+
+.column {
+    flex: 1; /* Kolumner tar upp lika mycket utrymme */
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+
+.column img {
+    max-width: 60%;
+    height: auto;
+    margin-left: auto;
+
+}
+
+.right {
+    text-align: right; /* Högerställ texten */
+}
+
+.column h3 {
+    font-size: 30px;
+}
+  
+  h3 {
+    margin-top: 0;
+    color: white;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content:flex-start; /* Flyttar bilden till höger */
+}
+
+
+.allauth-header h1 {
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    padding-top: 120px;
+    padding-bottom: 20px;
+    position: absolute;
+}
+
+
+/* Stilar för själva formuläret */
+.form-page-container {
+    padding-top: 200px;
+
+    display: flex;
+    flex-direction: column;  /* Se till att barnen ligger ovanpå varandra */
+    justify-content: center; /* Vertikal centrering */
+    align-items: center;     /* Horisontell centrering */        /* Full höjd på viewporten */
+    text-align: center;
+    position: relative;
+}
+
+/* Eventuell extra stil för formuläret */
+.signup {
+    max-width: 60%; /* Justera bredden på formuläret om du vill */
+    width: 100%;      /* Se till att formuläret är responsivt */
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding:60px;
+    text-align: left;
+    color: white;
+}
+
+.sign-up{
+    text-align: center;
+    color: white;
+    font-size: 44px;
+    padding-top: 40px;
+    margin-top: 40px;
+    margin-top: 40px;
+    margin-bottom: auto;
+}
+
+a {
+    color: rgb(245, 138, 156);
+    font-weight: 700;
+}
+
+
+.account-r {
+    text-align: center; /* Centrerar texten i paragrafen */
+    padding-top: 15px;
+}
+
+.sign-up-p{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.sell-pitch{
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    font-size: 38px;
+    padding-bottom: 30px;
+    padding-top: 60px;
+}
+
+.container1{
+    padding-bottom: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.login-back{
+    background-image: url(../images/cosmic-clwz0l91f6tdrdnh.jpg);
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.sign-in{
+    font-size: 44px;
+}
+
+.signin {
+    max-width: 60%; /* Justera bredden på formuläret om du vill */
+    width: 100%;      /* Se till att formuläret är responsivt */
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.895);
+    border-radius: 10px;
+    padding:60px;
+    text-align: left;
+    color: white;
+    margin-bottom: 100px;
+}
+
+.feature-login{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 80px;
+
+}
+
+.feature-login p {
+    padding-bottom: 80px;
+}
+
+.feature-login-header{
+    font-size: 40px;
+    padding-bottom: 70px;
+}
+
+
+
+.level{
+    text-align: center;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.username-profile{
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    padding-top: 5px;
+}
+
+.row-profile {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Gör så att element flyttas till nästa rad om det inte får plats */
+    gap: 10px; /* Mellanrum mellan kolumnerna */
+}
+
+.column-profile {
+    flex: 1; /* Kolumner tar upp lika mycket utrymme */
+
+}
+
+.row-stat {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Gör så att element flyttas till nästa rad om det inte får plats */
+    gap: 10px; /* Mellanrum mellan kolumnerna */
+}
+
+.you-stats{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    padding-top: 3%;
+    padding-bottom: 20%;
+    background-color:#2c3e50;
+    box-shadow: 100px 100px 500px 300px #3498db60;
+}
+.you-stats img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+    border: 10px solid white;
+}
+.header-stats h3{
+    text-align: center;
+    padding-bottom: 1%;
+    padding-top: 8%;
+    font-size: 40px;
+}
+.rank h1{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 4%;
+    padding-bottom: 20px;
+}
+.btn-strength {
+    background-color: #da0000;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+
+.btn-agility {
+    background-color: #00c264;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+.btn-stamina {
+    background-color: #dfb200;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+}
+.header-stats2{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 140px;
+    font-size: 36px;
+
+}
+
+.edit-stats{
+    text-align: center;
+    font-size: 20px;
+    padding-top: 40px;
+
+}
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black with opacity */
+}
+
+/* Pop-up Content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 300px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-container {
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 100px; /* Space between grid items */
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-image {
+    width: 100%; /* Take up full width of its grid item */
+    max-width: 100%; /* Ensure it doesn't exceed the container width */
+    height: auto;
+}
+
+.form-field {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn-primary-strength:hover {
+    background-color: #0056b3;
+}
+
+.header-stats2 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-primary-strength{
+    background-color: #007bff;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: color 0.3s ease;
+    margin-top: 40px;
+}
+
+.goback-stats{
+    padding: 40px;
+    background-color: #2c3e50;
+}
+
+/*.profile-pic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    /* Remove fixed border style from here 
+}
+
+/* Ensure dynamic styles are applied correctly
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+}*/
+
+.profile-pic-container {
+    position: relative; /* Create a positioning context for absolutely positioned children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px; /* Same width as profile-pic */
+    height: 200px; /* Same height as profile-pic */
+    margin: 0 auto; /* Center the container */
+}
+
+.wings {
+    position: absolute;
+    top: 38%; /* Adjust to center vertically */
+    left: 50%; /* Adjust to center horizontally */
+    transform: translate(-50%, -50%); /* Use transform to precisely center */
+    width: 435px; /* Width of the wings, adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1; /* Behind the profile picture */
+}
+
+
+
+.profile-pic {
+    position: relative;
+    z-index: 2; /* Above the wings */
+}
+
+.profile-pic img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.rank-s img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(255, 0, 0), rgb(0, 0, 0)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.rank-a img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(0, 224, 253), rgb(0, 0, 0)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.rank-b img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(245, 131, 0), rgb(251, 255, 0)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.rank-c img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(0, 47, 255), rgb(192, 192, 192)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.rank-d img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(142, 228, 3), rgb(153, 153, 153)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.rank-e img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(255, 255, 255), rgba(253, 135, 0, 0.562)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.rank-f img {
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to right, rgb(110, 110, 110), rgb(255, 255, 255)) border-box;
+    border-radius: 50em;
+    border: 8px solid transparent;
+}
+
+.font-s {
+    color: rgb(255, 0, 0)
+}
+
+.font-a {
+    color: rgb(7, 16, 141);
+}
+
+.font-b {
+    color: darkorange;
+}
+
+.font-c {
+    color: rgb(0, 191, 255);
+}
+
+.font-d {
+    color: rgb(0, 255, 0);
+}
+
+.font-e {
+    color: rgb(255, 174, 0);
+}
+
+.font-f {
+    color: rgba(255, 255, 255, 0.404);
+}
+
+
+.gradient-text {
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(1.3deg, #d31200, #000000); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+}
+
+.header-s{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #ff1500, #5a0000); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 2px 2px 10px #00000083;
+
+}
+.header-a{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #00f7ff, #00ffff); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 3px 3px 10px #0000008f;
+
+}
+.header-b{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #ffeb00, #ff0000); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 3px 3px 10px #0000008f;
+
+}
+.header-c{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #0026ff, #ffffff); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 3px 3px 10px #0000008f;
+}
+.header-d{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #88ff00, #ffffff); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 3px 3px 10px #0000008f;
+
+}
+.header-e{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #ff7d03, #ffffff); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 3px 3px 10px #0000008f;
+}
+.header-f{
+    font-size: 48px; /* Adjust the font size as needed */
+    font-weight: bold;
+    background: linear-gradient(0.3deg, #ffffff, #858585); /* Define your gradient colors */
+    -webkit-background-clip: text; /* Clip background to text */
+    -webkit-text-fill-color: transparent; /* Make text color transparent */
+    background-clip: text; /* For non-WebKit browsers */
+    text-shadow: 3px 3px 10px #0000008f;
+}
+
+.wings-s{
+    background-image: url(../images/wings/Wings-s.gif);
+}
+.wings-a {
+    background-image: url(../images/wings/Wings-A.gif);
+}
+.wings-b {
+    background-image: url(../images/wings-b.png);
+}
+.wings-c {
+    background-image: url(../images/wings/Wings-c.gif);
+}
+.wings-d {
+    background-image: url(../images/wings/Wings-d.gif);
+}
+.wings-e {
+    background-image: url(../images/wings/Wings-e.gif);
+}
+.wings-f {
+    background-image: url(../images/wings/Wings-f.gif);
+}
+
+.btn-primary-update_profile_picture{
+    text-align: center;
+    font-size: 15px;
+    font-weight: 800;
+    padding-top: 65px;
+
+}
+
+
+
+.media-form-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto; /* Added margin for spacing from top */
+    padding: 20px;
+    background: #425c75; /* Dark background color for form container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.media-form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ecf0f1; /* Light text color for headings */
+}
+
+.media-form h2 {
+    margin-top: 20px;
+    border-bottom: 2px solid #4a6785; /* Subtle border color */
+    padding-bottom: 10px;
+    color: #ecf0f1; /* Light text color for subheadings */
+}
+
+.media-form .form-group {
+    margin-bottom: 20px;
+}
+
+.media-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700; /* Bold labels */
+    color: #ecf0f1; /* Light text color for labels */
+}
+
+.media-form input[type="text"],
+.media-form input[type="number"],
+.media-form input[type="file"] {
+    padding: 10px;
+    border: 1px solid #34495e; /* Matching border color */
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #1E2A38; /* Dark background color for inputs */
+    color: white;
+}
+
+.media-form .submit-button {
+    padding: 10px 20px;
+    background-color: #3498db; /* Light blue background color */
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+}
+
+.media-form .submit-button:hover {
+    background-color: #2980b9; /* Darker blue on hover */
+}
+
+
+.podium-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the first user */
+    background-color: #041a30;
+    padding-top: 30px;
+}
+
+.podium-row {
+    display: flex;
+    justify-content: center; /* Center the row of 2nd and 3rd */
+    margin-top: 10px; /* Space between 1st and row */
+}
+
+.podium-user {
+    text-align: center;
+    margin: 0 10px; /* Space between podium users */
+}
+
+.podium-1 {
+    position: relative; /* Ensure relative positioning so the banner and profile pic can align properly */
+    z-index: 2; /* Above the background */
+    text-align: center;
+    padding-top: 80px;
+}
+ 
+/* Styling the banner behind the profile picture */
+.banner {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px; /* Increased the width further to make it larger */
+    height: 200px; /* Adjust height for a more prominent look */
+    z-index: 1;
+}
+
+/* Make sure the banner image fills the container */
+.banner img {
+    width: 100%; /* Stretch to fill the full width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.podium-2 {
+    position: relative; /* Ensure relative positioning so the banner and profile pic can align properly */
+    z-index: 2; /* Above the background */
+    margin-right: 360px;
+}
+
+.podium-3 {
+    position: relative; /* Ensure relative positioning so the banner and profile pic can align properly */
+    z-index: 2; /* Above the background */
+    margin-left: 180px;
+}
+
+.podium-1 img {
+    width: 140px; /* Larger size for the first place */
+    height: 140px; /* Adjust as needed */
+    border-bottom: #eeff00 8px solid; /* Blue border for the first place */
+}
+
+.podium-2 img {
+    width: 120px; /* Larger size for the first place */
+    height: 120px; /* Adjust as needed */
+    border-bottom: #eeff00 8px solid; /* Blue border for the first place */
+}
+.podium-3 img {
+    width: 100px; /* Larger size for the first place */
+    height: 100px; /* Adjust as needed */
+    border-bottom: #eeff00 8px solid; /* Blue border for the first place */
+}
+
+.podium-2-banner, .podium-3-banner {
+    position: absolute; /* Position freely */
+    width: 250px; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    z-index: 1; /* Behind the profile picture */
+}
+
+.podium-2-banner {
+    margin-top: -80px;
+    left: calc(50% - 320px); /* Adjust based on podium positioning */
+}
+
+.podium-3-banner {
+    margin-top: -80px;
+    left: calc(50% + 330px); /* Adjust based on podium positioning */
+}
+
+.send-form{
+    text-align: center;
+    font-size: 20px;
+    padding-bottom: 20px;
+    background-color: #041a30;
+    color: white;
+}
+
+.form-list{
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    color: white;
+}
+.top-50{
+    margin-top: 300px;
+    font-size: large;
+    text-align: center;
+    color: white;
+    background-color: #041a30;
+    z-index: 3;
+}
+.darkblue{
+    background-color: #041a30;
+}
+
+.darkblue h1, h2{
+    text-align: center;
+    font-size: 36px;
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 20px;
+
+}
+.other-users {
+    margin-top: 40px; /* Space above the table */
+    padding: 20px; /* Padding around the table */
+    background-color: #041a30;
+    ; /* Dark background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Remove spacing between borders */
+}
+
+th, td {
+    padding: 12px; /* Padding for table cells */
+    text-align: center; /* Center-align text */
+    border: 1px solid #fff; /* White border */
+}
+
+th {
+    background-color: #34495e; /* Darker header background */
+    color: #fff; /* White text for header */
+}
+
+tr:nth-child(even) {
+    background-color: #34495e; /* Alternate row background color */
+}
+
+tr:hover {
+    background-color: #3b5998; /* Highlight row on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+td {
+    background-color: #2c3e50; /* Table cell background */
+    color: #ecf0f1; /* Light text color */
+}
+
+.profile-pic-container {
+    display: flex; /* Flexbox for profile pictures */
+    justify-content: center; /* Center profile pictures */
+}
+
+.profile-pic img {
+    border-radius: 50%; /* Circular profile pictures */
+    border: 2px solid #fff; /* White border around profile pictures */
+}
+.level{
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .podium-row {
+        flex-direction: row; /* Stack vertically on smaller screens */
+        align-items: center; /* Center align items */
+    }
+
+    .podium-user {
+        flex: 1 1 100%; /* Make each user take full width */
+    }
+    .podium-user podium-3 podium-2{
+        flex: 1 1 100%; /* Make each user take full width */
+        margin-top: 30px;
+    }
+
+    .banner {
+        max-width: 80%; /* Allow more space on smaller devices */
+    }
+}
+
+@media (max-width: 480px) {
+    .podium-user {
+        min-width: auto; /* Remove minimum width to allow full responsiveness */
+    }
+
+    .banner {
+        max-width: 90%; /* Adjust banner size for very small screens */
+    }
+}
+
+.chat-section {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #1E2A38;
+}
+
+.chat-section h2 {
+    margin-bottom: 15px;
+}
+
+.chat-messages {
+    list-style-type: none;
+    padding: 0;
+    height: 300px; /* Set height for scrolling */
+    overflow-y: scroll; /* Enable scrolling */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.chat-messages li {
+    padding: 8px 12px;
+    border-bottom: 1px solid #fd0000;
+}
+
+.chat-messages li:last-child {
+    border-bottom: none; /* Remove border from last item */
+}
+
+#input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#sendBtn {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#sendBtn:hover {
+    background-color: #218838;
+}

@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<header class="send-form">
+</header>
+
+<main class="darkblue"> <h1>Leaderboard</h1><br> <h2>Top 3</h2>
+    <div class="podium-container">
+        <div class="podium-user podium-1">
+            <div class="profile-pic">
+                <img src="{% if leaderboard_entries.0.user.userprofile.profile_picture %}
+                            {{ leaderboard_entries.0.user.userprofile.profile_picture.url }}
+                         {% else %}
+                            {% static 'images/Default_pfp.svg.png' %}
+                         {% endif %}" 
+                     alt="Profile Picture" width="150" height="150">
+            </div>
+            <div class="username">{{ leaderboard_entries.0.user.username }}</div>
+            <div class="level"><p>Level:</p>{{ leaderboard_entries.0.level }}</div>
+        </div>
+        <div class="banner podium-1-banner">
+            <img src="{% static 'images/S-ranker-banner.gif' %}" alt="Banner">
+        </div>
+        
+        <div class="podium-row">
+            <div class="podium-user podium-2">
+                <div class="profile-pic">
+                    <img src="{% if leaderboard_entries.1.user.userprofile.profile_picture %}
+                                {{ leaderboard_entries.1.user.userprofile.profile_picture.url }}
+                             {% else %}
+                                {% static 'images/Default_pfp.svg.png' %}
+                             {% endif %}" 
+                         alt="Profile Picture" width="80" height="80">
+                </div>
+                <div class="username">{{ leaderboard_entries.1.user.username }}</div>
+                <div class="level"><p>Level:</p>{{ leaderboard_entries.1.level }}</div>
+            </div>
+            <div class="banner podium-2-banner">
+                <img src="{% static 'images/A-ranker-banner.gif' %}" alt="Banner">
+            </div>
+            
+            <div class="podium-user podium-3">
+                <div class="profile-pic">
+                    <img src="{% if leaderboard_entries.2.user.userprofile.profile_picture %}
+                                {{ leaderboard_entries.2.user.userprofile.profile_picture.url }}
+                             {% else %}
+                                {% static 'images/Default_pfp.svg.png' %}
+                             {% endif %}" 
+                         alt="Profile Picture" width="80" height="80">
+                </div>
+                <div class="username">{{ leaderboard_entries.2.user.username }}</div>
+                <div class="level"><p>Level:</p>{{ leaderboard_entries.2.level }}</div>
+            </div>
+            <div class="banner podium-3-banner">
+                <img src="{% static 'images/B-ranker-banner.gif' %}" alt="Banner">
+            </div>
+        </div>
+    </div>
+    <div class="top-50"><br><br>
+        <h3>Would you like to make it among the legends? Press here to fill out the form <a href="{% url 'submit_media_form' %}">Send form</a></h3><br><br>
+        <h3>top 50</h3>
+    <div class="other-users">
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Profile Picture</th>
+                    <th>Username</th>
+                    <th>Level</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in leaderboard_entries %}
+                    {% if forloop.counter > 3 %}  {# Only display entries after the first 3 #}
+                        <tr>
+                            <td>{{ forloop.counter }}</td>  {# This will display the correct rank #}
+                            <td>
+                                <div class="profile-pic-container">
+                                    <div class="profile-pic">
+                                        <img src="{% if entry.user.userprofile.profile_picture %}
+                                                    {{ entry.user.userprofile.profile_picture.url }}
+                                                 {% else %}
+                                                    {% static 'images/Default_pfp.svg.png' %}
+                                                 {% endif %}" 
+                                             alt="Profile Picture" width="50" height="50">
+                                    </div>
+                                </div>
+                            </td>
+                            <td>{{ entry.user.username }}</td>
+                            <td>{{ entry.level }}</td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</main>
+{% endblock %}

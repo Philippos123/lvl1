@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block title %} Home - My Django site {% endblock %}
+
+{% block content %}
+<section class="hero">
+    <div class="hero-overlay">
+        <h1>Try out your strength today</h1>
+        <p>Welcome to Level Up, a place where your goal is to become the best!<br><br> Try out our rank system and aim for the stars!</p>
+        <a href="{{ signup_url }}" class="btn-primary">Sign up!</a>
+    </div>
+</section>
+<section class="features">
+    <h2>Why you should Level Up with us!</h2>
+    
+    <!-- First row with a text column and an image column -->
+    <div class="row">
+        <div class="column">
+            <h3>Track your progress</h3>
+            <p>When you have created an account on Level Up, you will be able to take a test. 
+                This test is for us to measure your abilities and strength! Depending on your level, you will be placed in a rank.
+                You can see us as your personal guild. 
+                <br><br>Our ranks range from E-tier to S-tier. 
+            </p>
+        </div>
+        <div class="column image-container">
+            <img src="../static/images/track.png" alt="Compete Icon">
+        </div>
+    </div>
+    
+    <!-- Second row with an image column and a text column -->
+    <div class="row">
+        <div class="column">
+            <img src="../static/images/Compete.png" alt="Compete Icon" width="auto" height="auto">
+        </div>
+        <div class="column">
+            <h3 class="right">Compete against your guildmates</h3>
+            <p class="right">Compete amongst your guildmates and try to become the strongest!
+                <br>As we told you. <br><br>We are like a guild from those adventure movies. 
+                And the best part of being in a guild? You will get some guildmates that will become your rivals.
+            </p>
+        </div>
+    </div>
+    
+    <!-- Third row with a text column and an image column -->
+    <div class="row">
+        <div class="column">
+            <h3>Rank Up</h3>
+            <p>Maybe you want to focus on that strength of yours? <br><br>
+            Or maybe you want to get some points in agility? <br><br> Train hard, train smart, because this guild
+            doesn't care about your weight, height, or measurements. <br><br> Prove you are the strongest no matter whatdwadawdwadwadawdawd! Hello Sweden!</p>
+        </div>
+        <div class="column image-container">
+            <img src="../static/images/stats.png" alt="Compete Icon">
+        </div>
+    </div>
+</section>
+
+<!-- Adding the Chat Section -->
+
+</section>
+<section>
+    <h2>Update your profile!</h2>
+    <a></a>
+</section>
+{% endblock %}

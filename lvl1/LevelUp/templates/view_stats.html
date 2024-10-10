@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}View Stats{% endblock %}
+
+{% block content %}
+    <h1>Your Stats</h1>
+    <p>Category 1: {{ user_stats.category1 }}</p>
+    <p>Category 2: {{ user_stats.category2 }}</p>
+    <p>Category 3: {{ user_stats.category3 }}</p>
+{% endblock %}
